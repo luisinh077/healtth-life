@@ -16,12 +16,13 @@ export default function Form() {
   }
 
   function validationImc() {
-    if (weight != '' && height != '') {
+    if (weight != null && height != null) {
       imcCalculator()
-      setHeight('')
-      setWeight('')
+      setHeight(null)
+      setWeight(null)
       setMessageImc("Seu imc é:")
       setTextButton("Calcular Novamente")
+      KeyboardEvent=""
       return
     }
     setImc(null)
